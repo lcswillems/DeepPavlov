@@ -132,3 +132,13 @@ class StringMultiplier(Component):
             res.append([s] * len(r))
 
         return res
+
+
+@register('take_last_el')
+class TakeLastElement(Component):
+
+    def __init__(self, **kwargs):
+        pass
+
+    def __call__(self, batch):
+        return [batch[-1]]

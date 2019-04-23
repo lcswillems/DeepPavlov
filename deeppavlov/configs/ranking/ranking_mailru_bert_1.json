@@ -57,9 +57,14 @@
         "in": ["bert_features"],
         "in_y": ["y"],
         "out": ["predictions"]
+      },
+      {
+        "class_name": "take_last_el",
+        "in": ["predictions"],
+        "out": ["pred"]
       }
     ],
-    "out": ["predictions"]
+    "out": ["pred"]
   },
   "train": {
     "batch_size": 32,
